@@ -96,6 +96,8 @@ void showPerson(Addressbooks *abs) {
 
 //https://www.zhihu.com/question/35593391
 //判断是否存在查询的人员，存在返回在数组中索引位置，不存在返回-1
+
+//引用使用的场景，通常用来修饰形参
 int isExist(Addressbooks *abs, const string& name) {
     for (int i = 0; i < abs->m_Size; i++) {
         if (abs->personArray[i].m_Name == name) {
@@ -119,36 +121,36 @@ void showMenu() {
     cout << "***************************" << endl;
 }
 
-int main() {
-
-    int select = 0;
-    Addressbooks abs;
-    abs.m_Size = 0;
-
-    while (true) {
-        showMenu();
-
-        cin >> select;
-
-        switch (select) {
-            case 1:  //添加联系人
-                addPerson(&abs);
-                break;
-            case 2:  //显示联系人
-                break;
-            case 3:  //删除联系人
-                break;
-            case 4:  //查找联系人
-                break;
-            case 5:  //修改联系人
-                break;
-            case 6:  //清空联系人
-                break;
-            case 0:  //退出通讯录
-                cout << "欢迎下次使用" << endl;
-                return 0;
-            default:
-                break;
-        }
-    }
-}
+//int main() {
+//
+//    int select = 0;
+//    Addressbooks abs;
+//    abs.m_Size = 0;
+//
+//    while (true) {
+//        showMenu();
+//
+//        cin >> select;
+//
+//        switch (select) {
+//            case 1:  //添加联系人
+//                addPerson(&abs);
+//                break;
+//            case 2:  //显示联系人
+//                break;
+//            case 3:  //删除联系人
+//                break;
+//            case 4:  //查找联系人
+//                break;
+//            case 5:  //修改联系人
+//                break;
+//            case 6:  //清空联系人
+//                break;
+//            case 0:  //退出通讯录
+//                cout << "欢迎下次使用" << endl;
+//                return 0;
+//            default:
+//                break;
+//        }
+//    }
+//}
